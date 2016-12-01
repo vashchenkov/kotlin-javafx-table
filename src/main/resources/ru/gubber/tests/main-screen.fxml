@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?><?import javafx.scene.control.cell.PropertyValueFactory?><?import javafx.scene.control.cell.TextFieldTableCell?><?import javafx.scene.control.TableColumn?><?import javafx.scene.control.TableView?><?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="ru.gubber.tests.MainScreenController">
+	<children>
+		<TableView AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+			editable="true" fx:id="duplicatesList">
+			<columns>
+				<TableColumn prefWidth="300.0" text="Путь" fx:id="fileNameColumn">
+					<cellValueFactory>
+						<PropertyValueFactory property="path" />
+					</cellValueFactory>
+					<cellFactory>
+						<TextFieldTableCell fx:factory="forTableColumn" />
+					</cellFactory>
+				</TableColumn>
+				<TableColumn prefWidth="70.0" text="Уд." fx:id="removeColumn" />
+			</columns>
+		</TableView>
+		<Button AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="15.0" mnemonicParsing="false"
+			fx:id="printBrn" text="Button" />
+	</children>
+</AnchorPane>
